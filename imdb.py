@@ -13,11 +13,11 @@ c1,c2,c3 = st.columns([2,4,1])
 
 with c1:
     st.markdown('')
-    st.image('/Users/himanshutipirneni/Downloads/imdb1.png',width = 150)
+    st.image('imdb1.png',width = 150)
 
 with c2:    
     home = st.selectbox('',['Home','Upcoming releases','Top 100 movies on IMDB','Movies by certificate','Movies by years','Action movies','Adventure movies','Comedy movies','Drama movies','Sci-Fi movies',"'A' Certificate movies",'IMDB Privacy Notice'])
-    data = '/Users/himanshutipirneni/Documents/imdb_top_1000.csv'
+    data = 'imdb_top_1000.csv'
     df = pd.read_csv(data)
     df = pd.DataFrame(df)
     del df['Poster_Link']
@@ -37,7 +37,7 @@ with c3:
 st.markdown('---')
 
 with st.sidebar:
-            st.image('/Users/himanshutipirneni/Downloads/imdb1.png', width=80)
+            st.image('imdb1.png', width=80)
             gap(3)
             st.markdown("<h3 style = 'text-align: left ; color: #F3CE13;'><b><u>About Us</u></b></h3>", unsafe_allow_html = True)
             st.write("""Launched online in 1990 and a subsidiary of Amazon.com since 1998, IMDb is the world's most popular and authoritative source for movie, TV and celebrity content, designed to help fans explore the world of movies and shows and decide what to watch.
@@ -48,7 +48,7 @@ with st.sidebar:
 
 if home == 'Home': 
     
-    st.video('/Users/himanshutipirneni/Downloads/imdb.mp4')
+    st.video('imdb.mp4')
     st.markdown("<h40 style = 'text-align: left;'>Credit - IMDB  -  ' https://www.youtube.com/watch?v=QgokG1rBZU4 '</h40>", unsafe_allow_html = True)
     st.markdown('---')
     st.markdown("<h5 style = 'text-align: left ; color: #F3CE13;'>Movies list on IMDB</h5", unsafe_allow_html = True)
@@ -69,7 +69,7 @@ if home == 'Home':
     ## JUSTICE LEAGUE
     
     st.markdown(f"<h3 style='text-align: left; color: white;'><b>Justice League</b></h3>", unsafe_allow_html=True)
-    st.video('/Users/himanshutipirneni/Downloads/JL.mp4')
+    st.video('JL.mov')
 
     ###################################################
     st.markdown("<h40 style = 'text-align: right ;'>Credit - Flashback FM  -  ' https://www.youtube.com/watch?v=uC9qU3X1JgM&t=10s '</h40>", unsafe_allow_html = True)
@@ -83,7 +83,7 @@ if home == 'Home':
     ## REAL STEEL
 
     st.markdown(f"<h3 style='text-align: left; color: white;'><b>Real Steel</b></h3>", unsafe_allow_html=True)
-    st.video('/Users/himanshutipirneni/Downloads/RS.mp4')
+    st.video('RS.mp4')
     st.markdown("<h40 style = 'text-align: right ;'>Credit - IGN  -  ' https://www.youtube.com/watch?v=SwfmV3nn6QA&t=9s '</h40>", unsafe_allow_html = True)
     st.markdown(f"<h5 style='text-align: left; color: white;'><b>People's champion? Sounds pretty good to me!!</b></h5>", unsafe_allow_html=True)
     st.markdown('<span style="color:gold">&#9733;&#9733;&#9733;&#9733;&#9733;</span>', unsafe_allow_html=True)
@@ -91,7 +91,7 @@ if home == 'Home':
 
 
 if home == 'Upcoming releases':
-    trailers = ["/Users/himanshutipirneni/Downloads/KFP4.mp4", "/Users/himanshutipirneni/Downloads/MW.mp4", "/Users/himanshutipirneni/Downloads/D2.mp4"]
+    trailers = ["KFP4.mp4","MW.mp4", "D2.mp4"]
     titles = ['Kung Fu Panda 4', 'Madame Web', 'Dune Part II']
     r_dates = ['March, 2024', 'February, 2024', 'March, 2024']
     st.markdown("<h4 style='text-align: left; color: #F3CE13;'><u><b>Coming soon to theatres :</b></u></h4>", unsafe_allow_html=True)
